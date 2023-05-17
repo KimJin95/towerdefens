@@ -219,6 +219,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f776e8ff240852e42924c7226edb9a68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &420215745 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8259830, guid: 54dd9cb5740188a488b8baebbf19207c, type: 3}
+  m_PrefabInstance: {fileID: 1314823618}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &420215747 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 19800002, guid: 54dd9cb5740188a488b8baebbf19207c, type: 3}
+  m_PrefabInstance: {fileID: 1314823618}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &447271592
 GameObject:
   m_ObjectHideFlags: 0
@@ -906,6 +916,11 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!224 &1025241400 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4780799520097260839, guid: b2bd9008ee044cc4e8e4c08da989b3a7, type: 3}
+  m_PrefabInstance: {fileID: 1962098956}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1045260189
 GameObject:
   m_ObjectHideFlags: 0
@@ -1746,6 +1761,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9de8ebeadaabeaa41bc81252d2023b8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  crossHair: {fileID: 1025241400}
+  bulletEffect: {fileID: 420215747}
+  bulletAudio: {fileID: 420215745}
 --- !u!143 &2043670976
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1776,6 +1794,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ccd357dd3efada48b21a98fc79a6f4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 3
+  jumpPower: 3
+  gravity: -20
 --- !u!120 &2043670978
 LineRenderer:
   m_ObjectHideFlags: 0
