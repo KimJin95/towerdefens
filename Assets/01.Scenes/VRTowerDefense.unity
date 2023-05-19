@@ -458,7 +458,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5366490713873120766, guid: 44cba8ae617d86d41bc6028f90e2be70, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 25.33
+      value: 23.8
       objectReference: {fileID: 0}
     - target: {fileID: 5366490713873120766, guid: 44cba8ae617d86d41bc6028f90e2be70, type: 3}
       propertyPath: m_LocalRotation.w
@@ -584,6 +584,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!224 &781295239 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4780799520097260839, guid: b2bd9008ee044cc4e8e4c08da989b3a7, type: 3}
+  m_PrefabInstance: {fileID: 1736853585}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &868804360
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1912,11 +1917,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2043670973}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d97fd282ce0d6244190d08f2d126436c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teleportCircle: {fileID: 781295239}
 --- !u!114 &2043670980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1924,11 +1930,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2043670973}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e972b305034eba459b9c3b078ca64cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teleportCircle: {fileID: 781295239}
 --- !u!114 &2043670981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1941,6 +1948,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1aeb030799df3408aa6f10292d1f57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  grabbedLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  grabRange: 1
 --- !u!1001 &2100509349
 PrefabInstance:
   m_ObjectHideFlags: 0

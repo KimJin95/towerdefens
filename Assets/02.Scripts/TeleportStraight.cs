@@ -8,7 +8,7 @@ public class TeleportStraight : MonoBehaviour
     [SerializeField] Transform teleportCircle;
 
     LineRenderer myline;
-    Vector3 originScale = Vector3.one * 0.02f;
+    Vector3 originScale = Vector3.one * 0.01f;
 
     private void Start()
     {
@@ -27,6 +27,15 @@ public class TeleportStraight : MonoBehaviour
         else if (ARAVRInput.GetUp(ARAVRInput.Button.One, ARAVRInput.Controller.LTouch))
         {
             myline.enabled = false;
+
+            if (teleportCircle.gameObject.activeSelf)
+            {
+                GetComponent<CharacterController>().enabled = false;
+
+                transform.position = teleportCircle.position + Vector3.up;
+
+                GetComponent<CharacterController>().enabled = true;
+            }
             teleportCircle.gameObject.SetActive(false);
         }
 
@@ -46,7 +55,13 @@ public class TeleportStraight : MonoBehaviour
                 teleportCircle.forward = hit.normal;
                 teleportCircle.localScale = originScale * Mathf.Max(1, hit.distance);
             }
+            else
+            {
+                myline.SetPosition(0, ray.origin);
+                myline.SetPosition(1, ray.origin + ARAVRInput.LHandPosition * 200);
 
+                teleportCircle.gameObject.SetActive(false);
+            }
         }
     }
 }
