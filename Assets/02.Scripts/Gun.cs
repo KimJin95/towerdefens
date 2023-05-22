@@ -40,6 +40,14 @@ public class Gun : MonoBehaviour
 
                 bulletEffect.transform.position = hit.point;
                 bulletEffect.transform.forward = hit.normal;
+
+                if (hit.transform.name.Contains("Drone"))
+                {
+                    DroneAI drone=hit.transform.GetComponent<DroneAI>();
+                    drone?.OnDamageProcess();  //?-> null연산자 null 인가 아닌가?
+
+                  
+                }
             }
         }
     }
